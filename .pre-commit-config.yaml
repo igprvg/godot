@@ -1,0 +1,14 @@
+﻿repos:
+  - repo: local
+    hooks:
+      - id: gdformat
+        name: gdformat
+        entry: gdformat
+        language: system
+        files: \.gd$
+
+      - id: gdlint
+        name: gdlint
+        entry: gdlint
+        language: system
+        files: \.gd$

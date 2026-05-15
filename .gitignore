@@ -1,0 +1,32 @@
+# Godot
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+*.translation
+
+# Godot export/build output
+/android/
+build/
+builds/
+exports/
+dist/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+*.DotSettings.user
+addons/
+
+# Rider / Godot plugin temporary files
+*.TMP
+*.tmp
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
