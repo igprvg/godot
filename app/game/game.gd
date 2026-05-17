@@ -2,12 +2,13 @@ extends Node2D
 
 
 func _ready():
-	var name: String = "Goblin"
+	var units: Array[GoblinEnemy] = [
+		GoblinEnemy.new(GoblinEnemy.Type.MELEE),
+		GoblinEnemy.new(GoblinEnemy.Type.MELEE).with_level(2),
+		GoblinEnemy.new(GoblinEnemy.Type.MELEE).with_level(5),
+		GoblinEnemy.new(GoblinEnemy.Type.MAGE),
+		GoblinEnemy.new(GoblinEnemy.Type.RANGE),
+	]
 
-	var info: Dictionary[String, Variant] = {
-		"name": name,
-		"damage": 10.0,
-		"hp": 100.0,
-	}
-
-	print(info)
+	for unit in units:
+		print(unit.damage)
