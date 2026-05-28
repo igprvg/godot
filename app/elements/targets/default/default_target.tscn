@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c0tojcg1gbt6x"]
+
+[ext_resource type="Texture2D" uid="uid://csviba8k86xsh" path="res://app/assets/default_target.png" id="1_5gfq0"]
+[ext_resource type="Script" uid="uid://dat1nbi4ferqo" path="res://app/elements/targets/default/default_target.gd" id="1_djl2c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5gfq0"]
+radius = 126.0
+
+[node name="DefaultTarget" type="CharacterBody2D" unique_id=1656945809]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_djl2c")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=165138161]
+texture = ExtResource("1_5gfq0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1980360048]
+shape = SubResource("CircleShape2D_5gfq0")

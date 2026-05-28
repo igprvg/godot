@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bwh6g2hmwy8l7"]
 
 [ext_resource type="Script" uid="uid://chpw06d0sldqm" path="res://app/elements/knife/knife.gd" id="1_j0lel"]
-[ext_resource type="Texture2D" uid="uid://c41q5hr7fm5ck" path="res://app/assets/knife1.png" id="1_jpt4t"]
+[ext_resource type="Texture2D" uid="uid://1kmu15k1g3jy" path="res://app/assets/knife.png" id="1_jpt4t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j0lel"]
 size = Vector2(20, 130)

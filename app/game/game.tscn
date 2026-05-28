@@ -1,8 +1,14 @@
 [gd_scene format=3 uid="uid://btlprx8j53oje"]
 
 [ext_resource type="PackedScene" uid="uid://4nxsmqwdj552" path="res://app/elements/knife_shooter/knife_shooter.tscn" id="1_o1mdt"]
+[ext_resource type="PackedScene" uid="uid://c0tojcg1gbt6x" path="res://app/elements/targets/default/default_target.tscn" id="2_c64pi"]
 
 [node name="Game" type="Node2D" unique_id=1962449770]
 
 [node name="KnifeShooter" parent="." unique_id=919265882 instance=ExtResource("1_o1mdt")]
-position = Vector2(359, 951)
+position = Vector2(0, 400)
+
+[node name="DefaultTarget" parent="." unique_id=1656945809 instance=ExtResource("2_c64pi")]
+position = Vector2(0, -200)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1181951140]
