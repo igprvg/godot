@@ -9,6 +9,6 @@
 position = Vector2(0, 400)
 
 [node name="DefaultTarget" parent="." unique_id=1656945809 instance=ExtResource("2_c64pi")]
-position = Vector2(0, -200)
+position = Vector2(0, -180)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1181951140]
