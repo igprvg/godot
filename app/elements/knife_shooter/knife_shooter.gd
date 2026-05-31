@@ -1,3 +1,4 @@
+class_name KnifeShooter
 extends Node2D
 
 var knife_scene: PackedScene = preload("res://app/elements/knife/knife.tscn")

@@ -82,3 +82,9 @@ repos:
 - `Working directory:` `$ModuleFileDir$`
 - `Advanced options:` отключаем все
 - `Show console:` `Never`
+
+Чтобы все `scripts` открывались в `IDE`:
+
+- `Editor → Editor Settings → Text Editor → External`: включаем
+- `Exec Path:` `C:/JetBrains/JetBrains Rider 2026.1.1/bin/rider64.exe`
+- `Exec Flags:` `{project} --line {line} {file}`

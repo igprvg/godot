@@ -1,3 +1,4 @@
+class_name Knife
 extends CharacterBody2D
 
 var speed: float = 4500.0
