@@ -1,6 +1,6 @@
 ﻿# GD toolkit
 
-### Отключи alias Microsoft Store для Python
+> Для отключения alias Microsoft Store для Python
 
 Если `where.exe python` показывает WindowsApps, отключи алиасы:
 - Открой Параметры Windows
@@ -9,6 +9,8 @@
 - Найди Псевдонимы выполнения приложений и отключи:
     - python.exe
     - python3.exe
+
+> Настройка
 
 ```shell
 # поиск
@@ -71,7 +73,7 @@ repos:
         files: \.gd$
 ```
 
-Для удобного форматирования при сохранении в Rider `Settings -> Tools -> File Watchers`
+> Для удобного форматирования при сохранении в Rider `Settings -> Tools -> File Watchers`
 
 - `Name:` `GDScript Format`
 - `File type:` `GdScript file`
@@ -83,7 +85,7 @@ repos:
 - `Advanced options:` отключаем все
 - `Show console:` `Never`
 
-Чтобы все `scripts` открывались в `IDE`:
+> Чтобы все `scripts` открывались в `IDE`:
 
 - `Editor → Editor Settings → Text Editor → External`: включаем
 - `Exec Path:` `C:/JetBrains/JetBrains Rider 2026.1.1/bin/rider64.exe`
