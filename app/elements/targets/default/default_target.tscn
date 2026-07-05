@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://csviba8k86xsh" path="res://app/assets/default_target.png" id="1_5gfq0"]
 [ext_resource type="Script" uid="uid://dat1nbi4ferqo" path="res://app/elements/targets/default/default_target.gd" id="1_djl2c"]
-[ext_resource type="PackedScene" uid="uid://bwh6g2hmwy8l7" path="res://app/elements/knife/knife.tscn" id="3_rt00x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gfq0"]
 radius = 126.0
@@ -20,6 +19,3 @@ shape = SubResource("CircleShape2D_5gfq0")
 
 [node name="ItemsContainer" type="Node2D" parent="." unique_id=808120111]
 show_behind_parent = true
-
-[node name="Knife" parent="ItemsContainer" unique_id=1227081482 instance=ExtResource("3_rt00x")]
-position = Vector2(0, 185)
