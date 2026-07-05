@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://csviba8k86xsh" path="res://app/assets/default_target.png" id="1_5gfq0"]
 [ext_resource type="Script" uid="uid://dat1nbi4ferqo" path="res://app/elements/targets/default/default_target.gd" id="1_djl2c"]
+[ext_resource type="Texture2D" uid="uid://1kmu15k1g3jy" path="res://app/assets/knife.png" id="3_rt00x"]
+[ext_resource type="Texture2D" uid="uid://cupxa52a6mt61" path="res://app/assets/default_target_left.png" id="4_xcwwk"]
+[ext_resource type="Texture2D" uid="uid://brbvaqoqgbfs2" path="res://app/assets/default_target_right.png" id="5_wlww5"]
+[ext_resource type="Texture2D" uid="uid://dofosfj1u4un0" path="res://app/assets/default_target_bottom.png" id="6_wp24r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5gfq0"]
 radius = 126.0
@@ -19,3 +23,58 @@ shape = SubResource("CircleShape2D_5gfq0")
 
 [node name="ItemsContainer" type="Node2D" parent="." unique_id=808120111]
 show_behind_parent = true
+
+[node name="KnifeParticles2D" type="CPUParticles2D" parent="." unique_id=2086169067]
+emitting = false
+amount = 5
+texture = ExtResource("3_rt00x")
+lifetime = 2.0
+one_shot = true
+preprocess = 0.2
+explosiveness = 1.0
+direction = Vector2(0, -1)
+spread = 100.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+
+[node name="DefaultTargetParticles2DLeft" type="CPUParticles2D" parent="." unique_id=1838218445]
+emitting = false
+amount = 1
+texture = ExtResource("4_xcwwk")
+one_shot = true
+direction = Vector2(0, -1)
+spread = 100.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+
+[node name="DefaultTargetParticles2DRight" type="CPUParticles2D" parent="." unique_id=1355669512]
+emitting = false
+amount = 1
+texture = ExtResource("5_wlww5")
+one_shot = true
+direction = Vector2(0, -1)
+spread = 100.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+
+[node name="DefaultTargetParticles2DBottom" type="CPUParticles2D" parent="." unique_id=2119352496]
+emitting = false
+amount = 1
+texture = ExtResource("6_wp24r")
+one_shot = true
+direction = Vector2(0, -1)
+spread = 100.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 100.0
+initial_velocity_max = 300.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0

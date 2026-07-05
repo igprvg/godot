@@ -1,6 +1,7 @@
 class_name DefaultTarget
 extends CharacterBody2D
 
+const SPEED: float = PI
 const ITEM_WIDTH: float = PI / 6
 const APPLE_POSITION: Vector2 = Vector2(0, 170)
 const KNIFE_POSITION: Vector2 = Vector2(0, 185)
@@ -9,17 +10,23 @@ const MAX_ATTEMPTS: int = 10
 @export var apple_spawn_count: int = 3
 @export var knife_spawn_count: int = 3
 
-var speed: float = PI
 var items_positions: Array[float] = []
 
 var knife_scene: PackedScene = preload("res://app/elements/knife/knife.tscn")
 var apple_scene: PackedScene = preload("res://app/elements/apple/apple.tscn")
 
+@onready var self_sprite: Sprite2D = $Sprite2D
 @onready var items_container: Node2D = $ItemsContainer
+@onready var cpu_particles_container: Array[CPUParticles2D] = [
+	$KnifeParticles2D,
+	$DefaultTargetParticles2DLeft,
+	$DefaultTargetParticles2DRight,
+	$DefaultTargetParticles2DBottom
+]
 
 
 func _physics_process(delta: float) -> void:
-	rotation += speed * delta
+	rotation += SPEED * delta
 
 
 func is_entered_in_items_positions(item_position: float, rng_position: float) -> bool:
@@ -66,6 +73,20 @@ func spawn_items(item_scene: PackedScene, item_scene_position: Vector2) -> void:
 	reset_items_positions()
 
 
+func explode() -> void:
+	var tween: Tween = create_tween()
+
+	items_container.hide()
+	self_sprite.hide()
+
+	for cpu_particle in cpu_particles_container:
+		cpu_particle.emitting = true
+		tween.parallel().tween_property(cpu_particle, "modulate:a", 0, 1.0)
+
+
 func _ready() -> void:
 	spawn_items(apple_scene, APPLE_POSITION)
 	spawn_items(knife_scene, KNIFE_POSITION)
+
+	await get_tree().create_timer(2.0).timeout
+	explode()
