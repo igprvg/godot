@@ -1,36 +1,40 @@
 class_name Knife
 extends CharacterBody2D
 
-var speed: float = 4500.0
-var speed_away: float = 1450.0
+enum State { IDLE, MOVING, MOVING_AWAY }
 
-var is_moving: bool = false
-var is_moving_away: bool = false
+const SPEED: float = 4500.0
+const SPEED_AWAY: float = 1450.0
+const AWAY_ROTATION: float = 4 * PI
 
-var away_rotation: float = 4 * PI
+var state: State = State.IDLE
 var point_of_collision: Vector2 = Vector2.DOWN
 
 
 func _physics_process(delta: float) -> void:
-	if is_moving:
-		var collision: KinematicCollision2D = move_and_collide(Vector2.UP * speed * delta)
+	match state:
+		State.IDLE:
+			pass
 
-		if collision:
-			var collider: Object = collision.get_collider()
+		State.MOVING:
+			var collision: KinematicCollision2D = move_and_collide(Vector2.UP * SPEED * delta)
 
-			if collider is DefaultTarget:
-				self.reparent(collider.items_container, true)
+			if collision:
+				var collider: Object = collision.get_collider()
 
-				is_moving = false
-			if collider is Knife:
-				point_of_collision = collision.get_normal()
+				if collider is DefaultTarget:
+					self.reparent(collider.items_container, true)
 
-				is_moving = false
-				is_moving_away = true
-	if is_moving_away:
-		rotation += away_rotation * delta
-		position += point_of_collision * speed_away * delta
+					state = State.IDLE
+				if collider is Knife:
+					point_of_collision = collision.get_normal()
+
+					state = State.MOVING_AWAY
+
+		State.MOVING_AWAY:
+			rotation += AWAY_ROTATION * delta
+			position += point_of_collision * SPEED_AWAY * delta
 
 
 func throw() -> void:
-	is_moving = true
+	state = State.MOVING
