@@ -99,5 +99,5 @@ func explode() -> void:
 func _ready() -> void:
 	spawn_items()
 
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(5.0).timeout
 	explode()
