@@ -8,7 +8,15 @@
 [node name="KnifeShooter" parent="." unique_id=919265882 instance=ExtResource("1_o1mdt")]
 position = Vector2(0, 400)
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1181951140]
+
 [node name="DefaultTarget" parent="." unique_id=1656945809 instance=ExtResource("2_c64pi")]
 position = Vector2(0, -180)
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1181951140]
+[node name="Label" type="Label" parent="." unique_id=776429984]
+offset_left = -142.0
+offset_top = -540.0
+offset_right = 144.0
+offset_bottom = -467.0
+text = "Godot"
+horizontal_alignment = 1

@@ -30,6 +30,10 @@ window/handheld/orientation=1
 
 enabled=PackedStringArray("res://addons/rider-plugin/plugin.cfg")
 
+[gui]
+
+theme/custom="uid://dv8ywdnvrmb5b"
+
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
