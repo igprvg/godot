@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://5xgyl6t8s50o"]
+
+[ext_resource type="Texture2D" uid="uid://2lmg24238qei" path="res://app/assets/background.png" id="1_01qp2"]
+[ext_resource type="Texture2D" uid="uid://3mg16w17gca8" path="res://app/assets/circle_ic.png" id="2_wbw4f"]
+[ext_resource type="Texture2D" uid="uid://bol20did87a3q" path="res://app/assets/apple_ic.png" id="3_acsmp"]
+[ext_resource type="Texture2D" uid="uid://butt2mam58fsy" path="res://app/assets/boss_ic.png" id="3_mgbf5"]
+[ext_resource type="Texture2D" uid="uid://cwonqjr267f6v" path="res://app/assets/knife_ic.png" id="5_mgbf5"]
+
+[node name="HUD" type="CanvasLayer" unique_id=372498383]
+layer = 10
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=241445762]
+layer = -10
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=716128436]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_01qp2")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1612024235]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1559729839]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=322878943]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1110088097]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "100"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=541161148]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=68914027]
+layout_mode = 2
+texture = ExtResource("2_wbw4f")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=2041385188]
+layout_mode = 2
+texture = ExtResource("2_wbw4f")
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=530106306]
+layout_mode = 2
+texture = ExtResource("2_wbw4f")
+stretch_mode = 5
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=194984687]
+layout_mode = 2
+texture = ExtResource("2_wbw4f")
+stretch_mode = 5
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer" unique_id=1313593368]
+layout_mode = 2
+texture = ExtResource("3_mgbf5")
+stretch_mode = 5
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=512671351]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2" unique_id=1142606382]
+layout_mode = 2
+text = "100"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2" unique_id=785890370]
+layout_mode = 2
+texture = ExtResource("3_acsmp")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1330016976]
+layout_mode = 2
+text = "STAGE 10"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1999266969]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=2108020927]
+layout_mode = 2
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1213732298]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1336548655]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=270992136]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1543394161]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1643432783]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")
+
+[node name="TextureRect6" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=495161083]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")
+
+[node name="TextureRect7" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=458042692]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")
+
+[node name="TextureRect8" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=433909580]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")
+
+[node name="TextureRect9" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=323352037]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")
+
+[node name="TextureRect10" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer2/VBoxContainer" unique_id=1847586817]
+layout_mode = 2
+texture = ExtResource("5_mgbf5")

@@ -2,21 +2,17 @@
 
 [ext_resource type="PackedScene" uid="uid://4nxsmqwdj552" path="res://app/elements/knife_shooter/knife_shooter.tscn" id="1_o1mdt"]
 [ext_resource type="PackedScene" uid="uid://c0tojcg1gbt6x" path="res://app/elements/targets/default/default_target.tscn" id="2_c64pi"]
+[ext_resource type="PackedScene" uid="uid://5xgyl6t8s50o" path="res://app/ui/hud/hud.tscn" id="3_lngpq"]
 
 [node name="Game" type="Node2D" unique_id=1962449770]
 
 [node name="KnifeShooter" parent="." unique_id=919265882 instance=ExtResource("1_o1mdt")]
-position = Vector2(0, 400)
+position = Vector2(360, 940)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1181951140]
+position = Vector2(360, 540)
 
 [node name="DefaultTarget" parent="." unique_id=1656945809 instance=ExtResource("2_c64pi")]
-position = Vector2(0, -180)
+position = Vector2(360, 360)
 
-[node name="Label" type="Label" parent="." unique_id=776429984]
-offset_left = -142.0
-offset_top = -540.0
-offset_right = 144.0
-offset_bottom = -467.0
-text = "Godot"
-horizontal_alignment = 1
+[node name="HUD" parent="." unique_id=372498383 instance=ExtResource("3_lngpq")]
